@@ -13,7 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $dados = User::orderBy('id')->get();
+        return view('alunos.index', compact('dados'));
     }
 
     /**

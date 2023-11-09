@@ -18,6 +18,7 @@ class Marca extends Migration
             $table->string('nome');
             $table->string('logo'); 
             $table->timestamps();
+            
         });
     }
 

@@ -18,6 +18,7 @@ class Estoque extends Migration
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->integer('quantidade');
             $table->timestamps();
+            
         });
     }
 

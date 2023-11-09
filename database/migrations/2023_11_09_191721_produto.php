@@ -21,6 +21,7 @@ class Produto extends Migration
             $table->unsignedBigInteger('marca_id');
             $table->foreign('marca_id')->references('id')->on('marcas');
             $table->timestamps();
+            
         });
     }
 

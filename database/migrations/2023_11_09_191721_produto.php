@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Favorito extends Migration
+class Produto extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class Favorito extends Migration
      */
     public function up()
     {
-        Schema::create('favoritos', function (Blueprint $table) {
-            $table->unsignedBigInteger('produto_id');
-            $table->foreign('produto_id')->references('id')->on('produtos');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+        Schema::create('produtos', function (Blueprint $table) {
+            $table->id();
+            $table->string('modelo');
+            $table->string('cor');
+            $table->integer('numero');
+            $table->unsignedBigInteger('marca_id');
+            $table->foreign('marca_id')->references('id')->on('marcas');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class Favorito extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favoritos');
+        Schema::dropIfExists('produtos');
     }
 }

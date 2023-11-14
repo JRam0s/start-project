@@ -18,7 +18,7 @@ class MarcaController extends Controller
 
     public function create()
     {
-        // return view('marca.create') 
+        // return view('marca.create'); 
     }
 
     public function store(Request $request)

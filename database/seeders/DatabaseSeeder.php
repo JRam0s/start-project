@@ -23,6 +23,12 @@ class DatabaseSeeder extends Seeder
         ];
         DB::table('marcas')->insert($data);
 
+        $data = [
+            ["modelo" => "DUNKSSSSSS", "cor" => "azulllllll", "numero" => 39, "marca_id" => 2],
+            
+        ];
+        DB::table('produtos')->insert($data);
+
         
     }
 }

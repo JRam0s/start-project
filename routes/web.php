@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 
 Route::resource('/marca', '\App\Http\Controllers\MarcaController');
+Route::resource('/produto', '\App\Http\Controllers\ProdutoController');
